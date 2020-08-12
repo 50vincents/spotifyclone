@@ -1,5 +1,6 @@
 import React from 'react';
 import "../styles/Login.css";
+import { loginUrl } from "../util/spotify";
 
 function Login() {
   return (
@@ -8,7 +9,7 @@ function Login() {
         src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
         alt=""
       />
-      <a>login with spotify</a>
+      <a href={loginUrl}>login with spotify</a>
     </div>
   )
 }
