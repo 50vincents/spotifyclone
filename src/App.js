@@ -15,11 +15,9 @@ import {useStateProviderValue} from './react-context/StateProvider';
 const spotify = new SpotifyWebApi();
 
 function App() {
-  const [token, setToken] = useState(null);
-
   // Grab anything from data layer, destructure
   // Dispatch used to shoot/update values in data layer
-  const [{}, dispatch] = useStateProviderValue();
+  const [{user, token}, dispatch] = useStateProviderValue();
 
    // run piece of code when component loads
   // when something changes re run
@@ -33,7 +31,7 @@ function App() {
         type: 'SET_TOKEN',
         token: _token
       })
-      
+
       spotify.setAccessToken(_token);
 
       // Get user
@@ -52,7 +50,7 @@ function App() {
     <div className="app">
       { 
         token ? (
-          <Player />
+          <Player spotify={spotify} />
         ) : (
           <Login />
         )

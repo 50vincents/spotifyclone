@@ -3,7 +3,7 @@ export const initialState = {
   playlists: [],
   playing: false,
   item: null,
-  token: null
+  token: 'BQCzICLDi8bYcoBYm-tUp1slwUMGW4NIUiMptRDD5crpNBj0jsrNKGapdkshUGroVnngN5FRdKfpbFfeyHnwz4pEL5R8eX24AEadlkeqX53aG2KbOk3tJ52Uw6MgQYMrvesOx2j93fU5lTw-Khu844AalMUZF6UaNEtm7Q'
 };
 
 // action manipulates data layer look like -> set action/user etc
