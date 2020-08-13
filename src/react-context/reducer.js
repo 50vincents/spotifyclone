@@ -3,7 +3,8 @@ export const initialState = {
   playlists: [],
   playing: false,
   item: null,
-  token: 'BQCzICLDi8bYcoBYm-tUp1slwUMGW4NIUiMptRDD5crpNBj0jsrNKGapdkshUGroVnngN5FRdKfpbFfeyHnwz4pEL5R8eX24AEadlkeqX53aG2KbOk3tJ52Uw6MgQYMrvesOx2j93fU5lTw-Khu844AalMUZF6UaNEtm7Q'
+  discover_weekly: null,
+  token: null
 };
 
 // action manipulates data layer look like -> set action/user etc
@@ -31,7 +32,13 @@ const reducer = (state, action) => { // reducers job is to listen to actions
       return {
         ...state,
         playlists: action.playlists
-      }
+      };
+
+    case 'SET_DISCOVER_WEEKLY':
+      return {
+        ...state,
+        discover_weekly: action.discover_weekly
+      };
 
     default:
       return state
