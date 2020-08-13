@@ -40,6 +40,18 @@ const reducer = (state, action) => { // reducers job is to listen to actions
         discover_weekly: action.discover_weekly
       };
 
+    case "SET_PLAYING":
+      return {
+        ...state,
+        playing: action.playing,
+      };
+
+    case "SET_ITEM":
+      return {
+        ...state,
+        item: action.item,
+      };
+
     default:
       return state
   }
